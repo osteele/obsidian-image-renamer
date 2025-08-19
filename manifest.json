@@ -1,11 +1,11 @@
 {
-  "id": "image-renamer",
-  "name": "Image Renamer",
-  "version": "1.0.0",
-  "minAppVersion": "0.15.0",
-  "description": "Rename image files using AI-generated captions",
-  "author": "Oliver Steele",
-  "authorUrl": "https://github.com/osteele",
-  "fundingUrl": "",
-  "isDesktopOnly": false
+	"id": "image-renamer",
+	"name": "Image Renamer",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Rename image files using AI-generated captions",
+	"author": "Oliver Steele",
+	"authorUrl": "https://github.com/osteele",
+	"fundingUrl": "",
+	"isDesktopOnly": false
 }

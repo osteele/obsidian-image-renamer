@@ -27,9 +27,13 @@ An Obsidian plugin that uses AI vision models to automatically generate meaningf
 3. Reload Obsidian
 4. Enable the plugin in Settings → Community plugins
 
-### From Community Plugins
+### Using BRAT (Beta Reviewers Auto-update Tool)
 
-(Pending approval)
+1. Install and enable the BRAT plugin from Obsidian's Community Plugins
+2. In BRAT settings, click "Add Beta plugin"
+3. Enter this repository URL: `https://github.com/osteele/obsidian-image-renamer`
+4. Click "Add Plugin"
+5. Enable "Obsidian Image Renamer" in Settings → Community plugins
 
 ## Usage
 
@@ -37,12 +41,12 @@ An Obsidian plugin that uses AI vision models to automatically generate meaningf
 
 The plugin adds two commands to Obsidian:
 
-1. **Rename image file with AI caption**: Automatically renames the current image file with the first AI-generated suggestion
-2. **Rename image file interactively**: Shows a modal with multiple caption suggestions that you can choose from or edit
+1. **Rename with best suggestion**: Automatically renames the current image file with the first AI-generated suggestion
+2. **Rename from suggestions**: Shows a modal with multiple caption suggestions that you can choose from or edit
 
 ### How to Use
 
-1. **From File Explorer**: Right-click any image file and select "Rename with AI caption" or "Rename interactively..."
+1. **From File Explorer**: Right-click any image file and select "Rename with best suggestion" or "Rename from suggestions"
 2. **From Inline Images**: Right-click on an image displayed inline in a note and select the rename options
 3. **From Open File**: Open an image file and run commands from the Command Palette (Ctrl/Cmd + P)
 4. The plugin will:
@@ -76,15 +80,29 @@ The plugin is designed to work with OpenAI's vision models but can be configured
 
 You can use any service that provides an OpenAI-compatible API by changing the API Endpoint in settings.
 
+### Local Models (Privacy-First)
+
+You can run vision models locally on your computer for complete privacy. See [LOCAL_MODELS.md](docs/LOCAL_MODELS.md) for detailed setup instructions. Popular options:
+- **Ollama** with LLaVA or Llama 3.2 Vision
+- **LM Studio** with various vision models
+- **LocalAI** for advanced users
+
+No code changes needed - just point the API endpoint to your local server!
+
+## Technical Details
+
+The plugin uses the [Vercel AI SDK](https://sdk.vercel.ai/) for seamless integration with multiple AI providers including OpenAI and Ollama. This provides a unified interface for all vision models with built-in retry logic, schema validation, and error handling.
+
 ## Development
 
 See [DEVELOPMENT.md](DEVELOPMENT.md) for build instructions and development guidelines.
 
 ## Roadmap
 
+- [x] Support for local AI models
+- [ ] Switch between multiple API providers and models
 - [ ] Batch rename all files with generic names (Download, Image, Screenshot, or UUIDs)
 - [ ] Custom prompt templates for different types of images
-- [ ] Integration with local AI models
 - [ ] Automatic retry with new API call when generated name already exists in vault
 
 ## Related Projects
