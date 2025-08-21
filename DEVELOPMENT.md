@@ -50,6 +50,10 @@ ln -sf $(pwd)/manifest.json ~/Obsidian/YourVault/.obsidian/plugins/obsidian-imag
 
 ## Technical Details
 
+### AI SDK Integration
+
+The plugin uses the [Vercel AI SDK](https://sdk.vercel.ai/) for seamless integration with multiple AI providers including OpenAI and Ollama. This provides a unified interface for all vision models with built-in retry logic, schema validation, and error handling.
+
 ### Dependencies
 - `obsidian` - The Obsidian API
 - `esbuild` - Build tool for bundling TypeScript

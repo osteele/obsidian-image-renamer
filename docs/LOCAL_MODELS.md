@@ -17,10 +17,10 @@ This guide explains how to use local vision models instead of cloud-based APIs l
    ```bash
    # macOS
    brew install ollama
-   
+
    # Linux
    curl -fsSL https://ollama.com/install.sh | sh
-   
+
    # Windows
    # Download from https://ollama.com/download
    ```
@@ -29,7 +29,7 @@ This guide explains how to use local vision models instead of cloud-based APIs l
    ```bash
    # Recommended: LLaVA (7B parameters, ~4GB download)
    ollama pull llava
-   
+
    # Alternative: Llama 3.2 Vision (newer, better quality)
    ollama pull llama3.2-vision:11b
    ```
@@ -91,6 +91,16 @@ This guide explains how to use local vision models instead of cloud-based APIs l
 ### Large Models (16GB+ RAM)
 - **LLaVA-34B**: Best quality but slow
 - **Llama 3.2 Vision 90B**: State-of-the-art, requires high-end hardware
+
+## Local Model Quality Considerations
+
+**Note**: Local vision models typically produce significantly lower quality results compared to cloud-based models. The smaller models that can run on consumer hardware such as my 16GB MacBook often exhibit:
+- Generic or vague descriptions (e.g., "a picture of something" instead of specific details)
+- Missing important elements from images
+- Poor understanding of complex scenes or text in images
+- Hallucinations or incorrect identifications
+
+For best results with image renaming, consider using cloud-based vision APIs (OpenAI, Anthropic, Gemini) despite the privacy and cost trade-offs. The quality gap between local and cloud models is particularly noticeable for tasks requiring detailed image understanding.
 
 ## Performance Tips
 
